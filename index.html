@@ -1,1 +1,455 @@
-<!doctype html><title>GroupSite</title>
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>复杂空间三维感知与智能交互小组 - 汤圣君副教授/特聘研究员</title>
+    <meta name="author" content="Shengjun Tang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="汤圣君教授的个人学术主页，深圳大学，研究方向包括机器视觉、三维场景重建与智能交互。">
+    <meta name="keywords" content="Shengjun Tang, 汤圣君, Shenzhen University, 3D Reconstruction, Point Cloud, SLAM, Photogrammetry">
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for clean, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="d.ico">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        papertitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #34495e;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJFVJNLM3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RJFVJNLM3P');
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#about" class="text-xl font-bold text-gray-800">复杂空间三维感知与智能交互小组</a>
+                <div class="hidden md:flex space-x-4 lg:space-x-6 items-center text-sm lg:text-base">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">关于我们</a>
+                    <a href="#news" class="text-gray-600 hover:text-blue-600 transition duration-300">最新动态</a>
+                    <a href="#achievements" class="text-gray-600 hover:text-blue-600 transition duration-300">成果与项目</a>
+                    <a href="#team" class="text-gray-600 hover:text-blue-600 transition duration-300">团队成员</a>
+                    <a href="#teaching" class="text-gray-600 hover:text-blue-600 transition duration-300">教学课程</a>
+                    <a href="#service-and-honors" class="text-gray-600 hover:text-blue-600 transition duration-300">服务与荣誉</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">关于我们</a>
+                <a href="#news" class="block py-2 text-gray-600 hover:text-blue-600">最新动态</a>
+                <a href="#achievements" class="block py-2 text-gray-600 hover:text-blue-600">成果与项目</a>
+                <a href="#team" class="block py-2 text-gray-600 hover:text-blue-600">团队成员</a>
+                <a href="#teaching" class="block py-2 text-gray-600 hover:text-blue-600">教学课程</a>
+                <a href="#service-and-honors" class="block py-2 text-gray-600 hover:text-blue-600">服务与荣誉</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- About Section -->
+        <section id="about" class="mb-24">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-2/3 space-y-4">
+                    <h1 class="text-4xl font-bold text-gray-900">复杂空间三维感知与智能交互小组</h1>
+                    <p class="text-lg text-blue-700 font-semibold">负责人 (PI): 汤圣君 副教授/特聘研究员、博士生导师、国家级青年人才</p>
+                    <p class="text-gray-600">
+                    📍 <a href="https://geospatial.szu.edu.cn/kjry/jsxl/2.htm" class="text-blue-600 hover:underline">深圳大学 | 建筑与城市规划学院 | 城市空间信息系</a>
+                    </p>
+                    <p class="text-gray-600">
+                    📍 <a href="https://geospatial.szu.edu.cn/kjry/jsxl/2.htm" class="text-blue-600 hover:underline">深圳大学 | 智慧城市研究院（郭仁忠院士团队）</a> 
+                   
+                    </p>
+                    <div class="space-y-3 text-gray-700">
+                        <p>🎓 本科及博士毕业于<a href="http://liesmars.whu.edu.cn/" class="text-blue-600 hover:underline">武汉大学</a>。</p>
+                        <p>🔬 曾于<a href="https://www.polyu.edu.hk/lsgi/" class="text-blue-600 hover:underline">香港理工大学(LSGI)</a>担任研究助理，后跟随郭仁忠院士于深圳大学<a href="#" class="text-blue-600 hover:underline">从事博士后研究</a>。</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="mailto:shengjuntang@szu.edu.cn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">联系邮箱</a>
+                        <a href="data/cv_tsj" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition">个人简历(CV)</a>
+                        <a href="https://scholar.google.com/citations?user=q-fQQqUAAAAJ&hl=en" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition">Google Scholar</a>
+                        <a href="https://github.com/ShengjunTang" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition">GitHub</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 flex-shrink-0">
+                    <img src="shengjuntangcircle1.png" alt="汤圣君教授照片" class="rounded-full shadow-2xl mx-auto w-64 h-64 object-cover">
+                </div>
+            </div>
+            <div class="mt-16 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg shadow-sm">
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">🌟 欢迎报考硕士/博士研究生! 🌟</h3>
+                <p class="text-gray-700 mb-2"><strong>🚀 主要研究方向:</strong> 城市三维重建 | 点云理解 | 激光 & 视觉 SLAM</p>
+                <p class="text-gray-700"><strong>💡 招生要求:</strong> 对机器视觉、三维场景理解、多模态学习充满热情，具备扎实的编程与数学基础，渴望在前沿学术研究与实际应用中挑战自我。</p>
+                <p class="mt-3 font-semibold">📢 加入我们，在深圳大学共同探索三维空间的无限可能！</p>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="mb-24 text-center">
+            <h2 class="section-heading">最新动态</h2>
+            <div class="max-w-4xl mx-auto">
+                <ul class="space-y-4 text-left">
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                        <strong>🎉 11/2026:</strong> 第十届全国激光雷达大会于2026年10月30日至11月1日在深圳举行，汤圣君担任大会组织委员会主任，团队参与大会组织并参会。团队论文<a href="data/2026-lidar10-young-paper-scene-reasoner.jpg" target="_blank" rel="noopener" class="text-blue-600 hover:underline">《SceneReasoner：用于大语言模型室内大尺度场景理解的解耦式空间标记化》</a>、<a href="data/2026-lidar10-young-paper-ugv-navigation.jpg" target="_blank" rel="noopener" class="text-blue-600 hover:underline">《空中先验引导下考虑路径回归约束的无人车地形导航》</a>、<a href="data/2026-lidar10-young-paper-tree-reconstruction.jpg" target="_blank" rel="noopener" class="text-blue-600 hover:underline">《融合双向几何一致性与冠层包络约束的树木程序化重建》</a>和<a href="data/2026-lidar10-young-paper-harness2building.jpg" target="_blank" rel="noopener" class="text-blue-600 hover:underline">《Harness2Building：面向机载激光点云 LoD2 建筑重建的反馈引导智能体框架》</a>获评青年优秀论文，汤圣君老师获评<a href="data/2026-lidar10-outstanding-advisor-tang-shengjun.jpg" target="_blank" rel="noopener" class="text-blue-600 hover:underline">优秀指导教师</a>。
+                    </li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 08/2026:</strong> 祝贺团队两篇论文《倾斜摄影三维 Mesh 模型无参考逐面片缺陷检测与质量评估方法》和《一种自适应剪枝的三维高斯SLAM实时高保真建模方法》发表于《测绘学报》。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 07/2026:</strong> 汤圣君老师获2026年深圳大学与香港岭南大学教师科研合作项目资助。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 06/2026:</strong> 汤圣君老师参加第四届中国数字地球大会，并作“城市级认知场景图构建及其大模型认知增强方法”报告。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 06/2026:</strong> 汤圣君老师获2026-2027年广东省科协青年科技人才培育计划项目支持。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎓 05/2026:</strong> 祝贺吴雨萱、罗建军、谢希平、冼敬光四位同学顺利毕业！四位同学在课题组期间认真踏实、主动探索，为团队发展作出了重要贡献，也为师弟师妹们留下了良好榜样。祝愿大家在未来的学习、工作和生活中一切顺利，前程似锦，继续保持热爱与探索，走向更加广阔的人生舞台。欢迎大家常回课题组看看！</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 05/2026:</strong> 汤圣君老师受邀担任美国摄影测量与遥感学会(ASPRS)会刊 Photogrammetric Engineering &amp; Remote Sensing (PE&amp;RS) 副主编。PE&amp;RS 是 ASPRS 旗下聚焦摄影测量、遥感与地理空间信息科学的重要国际期刊。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 01/2026:</strong> 团队发表在PE&RS的论文《Optimized 3D Building Mapping and Reconstruction via Cross-View Collaboration in Densely Built-Up Areas》荣获<a href="https://mp.weixin.qq.com/s/TvF1ouXDkzso6kpX1xZvZQ"class="text-blue-600 hover:underline"> "主编精选"</a>论文。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 09/2025:</strong> 团队牵头的“铁路综合枢纽数字孪生建模与智能管理关键技术及应用”<a href="https://mp.weixin.qq.com/s/oka1vsTNKUHXN-Ac9okcCw" class="text-blue-600 hover:underline">“获评2025中国地理信息科技进步一等奖”</a>。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 09/2025:</strong> 汤圣君老师获评<a href="https://mp.weixin.qq.com/s/jAfXHcO4WV4ssJ9m6RFlyQ" class="text-blue-600 hover:underline">“第三届中国激光雷达青年科学家奖”</a>。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 04/2025:</strong> 汤圣君老师受邀担任国际数字地球学会激光雷达专业委员会实景三维工作组副组长。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 12/2024:</strong> 恭喜! 论文 "BIM-Based Indoor Navigation Using End-to-End Visual Localization and ARCore" 被 Transactions In GIS 接收。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 12/2024:</strong> 恭喜! 汤圣君老师受邀担任美国摄影测量与遥感学会(ASPRS)期刊 Photogrammetric Engineering and Remote Sensing (PE&RS) 编委。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 08/2024:</strong> 祝贺，团队获得国家自然科学基金（面上项目）资助。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 07/2024:</strong> 祝贺！团队论文《三维场景图表达与应用》被《测绘学报》接收。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 05/2024:</strong> 祝贺，团队论文《BavsNeRF: Batch Active View Selection for Neural Radiance Field Using Scene Uncertainty》被CVPR Workshop接收。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 05/2024:</strong> 恭喜! 团队论文在ISPRS国际摄影测量与遥感学会会议上荣获最佳论文奖。</li>
+                    <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-blue-500"><strong>🎉 04/2024:</strong> 祝贺！论文《超体素随机森林与LSTM神经网络联合优化的室内点云高精度分类方法》入选2023年度优秀论文。</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Achievements Section -->
+        <section id="achievements" class="mb-24 text-center">
+            <h2 class="section-heading">学术成果与科研项目</h2>
+
+            <!-- Sub-section for Publications -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8">学术出版 (Selected Publications)</h3>
+            <div class="space-y-12 max-w-5xl mx-auto text-left">
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/mesh-quality-assessment-2026.png" alt="Mesh Quality Assessment" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="#"><papertitle>倾斜摄影三维 Mesh 模型无参考逐面片缺陷检测与质量评估方法</papertitle></a><p class="text-sm text-gray-600"><strong>汤圣君</strong>, 李寒雨, 王伟玺, 谢林甫, 李晓明, 郭仁忠</p><p class="text-sm font-semibold text-gray-800">测绘学报, 2026</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/3dgs-slam-pruning.png" alt="3D Gaussian SLAM" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="#"><papertitle>一种自适应剪枝的三维高斯SLAM实时高保真建模方法</papertitle></a><p class="text-sm text-gray-600">龚俊; 罗建军; 黎施彬; 陈蔚聪; 秦乐; <strong>汤圣君*</strong></p><p class="text-sm font-semibold text-gray-800">测绘学报, 2026</p></div></article>
+                 <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/3DSgraph.png" alt="3DSgraph" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.kdocs.cn/l/cjdV3qHZnn5i"><papertitle>Dependency-aware indoor 3D scene graph prediction via multimodal feature learning</papertitle></a><p class="text-sm text-gray-600">Shengnan Ke, Shibin Li, Jun Gong, Lingxiang Liu,Jianjun Luo, Bin Wang, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">Automation in Construction, 2026</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/leafwood.png" alt="Leaf-Wood Separation" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://ieeexplore.ieee.org/abstract/document/11134517/"><papertitle>Leaf–Wood Separation in Tree Point Clouds via Unlearning-Driven Supervoxel Random Forest</papertitle></a><p class="text-sm text-gray-600">Weixi Wang, Yuxuan Wu, Sen Jia, Linfu Xie, Renzhong Guo, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">IEEE Transactions on Geoscience and Remote Sensing, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/crossviewloc.png" alt="NeRFMatching" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://ieeexplore.ieee.org/abstract/document/11130429"><papertitle>NeRFMatching for Vehicle Localization: Cross-View Matching through Domain Adaptation with NeRF Representations</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Xiping Xie,Yusong Li, Zhihan Lv, Renzhong Guo, Weixi Wang</p><p class="text-sm font-semibold text-gray-800">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/crossviewbuildingrec.png" alt="3D Building Mapping" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="#"><papertitle>Optimized 3D Building Mapping and Reconstruction via Cross-View Collaboration in Densely Built-Up Areas</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Yujie Chen, Tian Yu, You Li, Linfu Xie, Weixi Wang, Renzhong Guo</p><p class="text-sm font-semibold text-gray-800">Photogrammetric Engineering & Remote Sensing, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/3dlearningmulmodal.png" alt="Multimodal Contrastive Learning" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/phor.70006"><papertitle>Multimodal Contrastive Learning for 3D Object Classification and Part-segmentation by Leveraging V-LLM and CNNs</papertitle></a><p class="text-sm text-gray-600">Jiaxin Jiang, Jun Gong, Shengnan Ke, Xiaoming Li, Zhigang Zhao, Jianjun Luo, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">Photogrammetric Record, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/arnavigation.png" alt="BIM-Based Indoor Navigation" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://onlinelibrary.wiley.com/doi/10.1111/tgis.13298"><papertitle>BIM-Based Indoor Navigation Using End-to-End Visual Localization and ARCore</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Jiawei Wan, Yusong, Li, Hongsheng Huang, Weixi Wang, Renzhong Guo, Yunjie Zhang</p><p class="text-sm font-semibold text-gray-800">Transactions In Gis, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/OptoViewNeRF.png" alt="OptiViewNeRF" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S1569843224006642"><papertitle>OptiViewNeRF: Optimizing 3D Reconstruction via Batch View Selection and Scene Uncertainty in Neural Radiance Fields</papertitle></a><p class="text-sm text-gray-600">You Li, Rui Li, Ziwei Li, Renzhong Guo, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">International Journal of Applied Earth Observation and Geoinformation, 2025</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/backtogeometry.png" alt="Back to Geometry" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S1569843224006216"><papertitle>Back to Geometry: Efficient Indoor Space Segmentation from Point Clouds by 2D-3D Geometry Constrains</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Junjie Huang, Benhe Cai, Han Du, Baoding Zhou, Zhigang Zhao, You Li, Weixi Wang</p><p class="text-sm font-semibold text-gray-800">International Journal of Applied Earth Observation and Geoinformation, 2024</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/indoorscenegraph.png" alt="Indoor Scene Graph" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="http://xb.chinasmp.com/CN/abstract/abstract13336.shtml"><papertitle>面向室内空间智能的三维场景图表达与应用</papertitle></a><p class="text-sm text-gray-600"><strong>汤圣君</strong>, 杜思齐, 王伟玺, 郭仁忠</p><p class="text-sm font-semibold text-gray-800">测绘学报, 2024</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/treenet.jpg" alt="TreeNet3D" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S1569843224002577"><papertitle>TreeNet3D : A large scale tree benchmark for 3D tree modeling, carbon storage estimation and tree segmentation</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Zhuoyu Ao, Yaoyu Li, Hongsheng Huang, Linfu Xie, Ruisheng Wang, Weixi Wang, Renzhong Guo</p><p class="text-sm font-semibold text-gray-800">International Journal of Applied Earth Observation and Geoinformation, 2024</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/asymformernew.png" alt="AsymFormer" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://arxiv.org/abs/2309.14065"><papertitle>AsymFormer: Asymmetrical Cross-Modal Representation Learning for Mobile Platform Real-Time RGB-D Semantic Segmentation</papertitle></a><p class="text-sm text-gray-600">Siqi Du, Weixi Wang, Renzhong Guo, Ruisheng Wang, Yibin Tian and <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">CVPR Workshop, 2024</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/trasnscnn.png" alt="TransCNNLoc" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003398?dgcid=coauthor"><papertitle>TransCNNLoc: End-to-End Pixel-level Learning for 2D-to-3D Pose Estimation in Dynamic Indoor Scene</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Yusong Li, Jiawei Wan, You Li, Baoding Zhou, Renzhong Guo, Weixi Wang, and Yuhong Feng</p><p class="text-sm font-semibold text-gray-800">ISPRS Journal of Photogrammetry and Remote Sensing, 2024</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/treejag.png" alt="Branching the Limits" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S1569843223003813"><papertitle>Branching the Limits: Robust 3D Tree Reconstruction from Incomplete Laser Point Clouds</papertitle></a><p class="text-sm text-gray-600">Weixi Wang, Yaoyu Li, Hongsheng Huang, Linping Hong, Siqi Du, Linfu Xie, Xiaoming Li, Renzhong Guo and <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">International Journal of Applied Earth Observation and Geoinformation, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/bplidar.png" alt="Backpack LiDAR-based SLAM" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://ieeexplore.ieee.org/abstract/document/10318824"><papertitle>Backpack LiDAR-based SLAM with Multiple Ground Constraints for Multi-storey Indoor Mapping</papertitle></a><p class="text-sm text-gray-600">Baoding Zhou, Haoquan Mo, <strong>Shengjun Tang*</strong>, Xing Zhang, and Qingquan Li</p><p class="text-sm font-semibold text-gray-800">IEEE Transactions on Geoscience and Remote Sensing, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/calib.png" alt="Robust Calibration" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://ieeexplore.ieee.org/document/10315057"><papertitle>Robust Calibration of Vehicle Solid-state Lidar-Camera Perception System Using Line-Weighted Correspondences in Natural Environments</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Yunqi Feng, Junjie Huang, Xiaoming Li, Zhihan Lv, Yuhong Feng, and Weixi Wang</p><p class="text-sm font-semibold text-gray-800">IEEE Transactions on Intelligent Transportation Systems, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/Syndatasets_AIC2023.png" alt="Skeleton-guided generation" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S0926580523003369"><papertitle>Skeleton-guided generation of synthetic noisy point clouds from as-built BIM to improve indoor scene understanding</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Hongsheng Huang, Yunjie Zhang, Mengmeng Yao, Xiaoming Li, Linfu Xie, and Weixi Wang</p><p class="text-sm font-semibold text-gray-800">Automation in Construction, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/treemodeling.png" alt="Tree Modeling" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="http://www.jors.cn/jrs/ch/reader/view_abstract.aspx?file_no=20230101"><papertitle>面向虚拟地理环境构建的树木模型高保真三维重建方法</papertitle></a><p class="text-sm text-gray-600">王伟玺, 黄鸿盛, 杜思齐, 李晓明, 谢林甫, 郭仁忠, <strong>汤圣君*</strong></p><p class="text-sm font-semibold text-gray-800">遥感学报, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/indoorclassification.png" alt="Indoor Classification" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="http://ch.whu.edu.cn/CN/Y2023/V48/I12/2361"><papertitle>超体素随机森林与 LSTM 神经网络联合优化的室内点云高精度分类方法</papertitle></a><p class="text-sm text-gray-600"><strong>汤圣君</strong>, 张韵婕, 李晓明, 姚萌萌, 叶致煌, 李亚鑫, 郭仁忠, 王伟玺</p><p class="text-sm font-semibold text-gray-800">武汉大学学报（信息科学版）, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/jag_pond.png" alt="Aquaculture Ponds" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S1569843223001486"><papertitle>Unsupervised stepwise extraction of offshore aquaculture ponds using super-resolution hyperspectral images</papertitle></a><p class="text-sm text-gray-600">Siqi Du, Hongsheng Huang, Fan He, Heng Luo, Yumeng Yin, Xiaoming Li, Linfu Xie, Renzhong Guo, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">International Journal of Applied Earth Observation and Geoinformation, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/treesegJSTAR.png" alt="Tree Segmentation" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://ieeexplore.ieee.org/abstract/document/10040735"><papertitle>An Individual Tree Segmentation Method from Mobile Mapping Point Clouds Based on Improved 3D Morphological Analysis</papertitle></a><p class="text-sm text-gray-600">Weixi Wang, Yuhang Fan, You Li, Xiaoming Li, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2023</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/AutoBIM_AIC2022.png" alt="AutoBIM" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/pii/S0926580522002953"><papertitle>BIM generation from 3D point clouds by combining 3D deep learning and improved morphological approach</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Xiaoming Li, Xianwei Zheng, Bo Wu, Weixi Wang, Yunjie Zhang</p><p class="text-sm font-semibold text-gray-800">Automation In Construction, 2022</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/superV_RS2022.png" alt="Supervoxel Random Forest" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.mdpi.com/2072-4292/14/6/1516"><papertitle>A Supervoxel-Based Random Forest Method for Robust and Effective Airborne LiDAR Point Cloud Classification</papertitle></a><p class="text-sm text-gray-600">Lingfeng Liao, <strong>Shengjun Tang*</strong>, Jianghai Liao, Xiaoming Li, Weixi Wang, Yaxin Li, Renzhong Guo</p><p class="text-sm font-semibold text-gray-800">Remote Sensing, 2022</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/pscnet_isprsannals2022.png" alt="PSCNET" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://isprs-annals.copernicus.org/articles/V-1-2022/129/2022/"><papertitle>PSCNET: EFFICIENT RGB-D SEMANTIC SEGMENTATION PARALLEL NETWORK BASED ON SPATIAL AND CHANNEL ATTENTION</papertitle></a><p class="text-sm text-gray-600">Siqi Du, <strong>Shengjun Tang*</strong>, Weixi Wang, Xiaoming Li, Yonghua Lu, Renzhong Guo</p><p class="text-sm font-semibold text-gray-800">ISPRS Annals, 2022</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/indoorSeg_ISPRS2021.png" alt="Indoor Segmentation" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S092427162100224X"><papertitle>Learning deep cross-scale feature propagation for indoor semantic segmentation</papertitle></a><p class="text-sm text-gray-600">Linxi Huan, Xianwei Zheng, <strong>Shengjun Tang</strong>, Jianya Gong</p><p class="text-sm font-semibold text-gray-800">ISPRS Journal of Photogrammetry and Remote Sensing, 2021</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/FITEE_2021.png" alt="Indoor 3D Modeling Survey" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://link.springer.com/article/10.1631/FITEE.2000492"><papertitle>A survey on indoor 3D modeling and applications via RGB-D devices</papertitle></a><p class="text-sm text-gray-600">Zhilu Yuan, You Li,<strong>Shengjun Tang*</strong>, Ming Li, Renzhong Guo, Weixi Wang</p><p class="text-sm font-semibold text-gray-800">Frontiers of Information Technology & Electronic Engineering, 2021</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/TrSLAM_PERS2020.png" alt="Trajectory Drift-Compensated" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.ingentaconnect.com/content/asprs/pers/2020/00000086/00000003/art00005"><papertitle>Trajectory Drift–Compensated Solution of a Stereo RGB-D Mapping System</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Qing Zhu, You Li, Wu Chen, Bo Wu, Renzhong Guo, Xiaoming Li, Chisheng Wang, Weixi Wang</p><p class="text-sm font-semibold text-gray-800">Photogrammetric Engineering & Remote Sensing, 2020</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/polelike_RS2019.png" alt="Pole-Like Street Furniture" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.mdpi.com/2072-4292/11/24/2920"><papertitle>Pole-Like Street Furniture Segmentation and Classification in Mobile LiDAR Data by Integrating Multiple Shape-Descriptor Constraints</papertitle></a><p class="text-sm text-gray-600">You Li, Weixi Wang, Xiaoming Li, Linfu Xie, Yankun Wang, Renzhong Guo, Wenqun Xiu, <strong>Shengjun Tang*</strong></p><p class="text-sm font-semibold text-gray-800">Remote Sensing, 2019</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/ComBA_ISPRS2016.png" alt="Combined adjustment" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S092427161630133X"><papertitle>Combined adjustment of multi-resolution satellite imagery for improved geo-positioning accuracy</papertitle></a><p class="text-sm text-gray-600"><strong>Shengjun Tang</strong>, Bo Wu, Qing Zhu</p><p class="text-sm font-semibold text-gray-800">ISPRS Journal of Photogrammetry and Remote Sensing, 2016</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/Com_ISPRS2015.png" alt="Geometric integration" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S092427161500055X"><papertitle>Geometric integration of high-resolution satellite imagery and airborne LiDAR data for improved geopositioning accuracy in metropolitan areas</papertitle></a><p class="text-sm text-gray-600">Bo Wu, <strong>Shengjun Tang</strong>, Qing Zhu, Kwan-yuen Tong, Han Hu, Guoyuan Li</p><p class="text-sm font-semibold text-gray-800">ISPRS Journal of Photogrammetry and Remote Sensing, 2015</p></div></article>
+                <article class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/para2014.png" alt="Parametric modeling" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div class="space-y-2"><a href="http://ch.whu.edu.cn/CN/10.13203/j.whugis20120485"><papertitle>三维 GIS 中的参数化建模方法</papertitle></a><p class="text-sm text-gray-600"><strong>汤圣君</strong>, 张叶廷, 许伟平, 谢潇, 朱庆, 韩元利, 吴强</p><p class="text-sm font-semibold text-gray-800">武汉大学学报（信息科学版）, 2014</p></div></article>
+            </div>
+
+            <!-- Sub-section for Projects -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8 mt-16">科研项目 (Research Projects)</h3>
+            <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md text-left">
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>深圳大学与香港岭南大学教师科研合作项目，开发个人化室内模拟平台用于机器人互动策略微调与部署，主持</li>
+                    <li>广东省科协，广东省科协青年科技人才培育计划，主持</li>
+                    <li>深圳大学校企产学研合作关键技术攻关专项（一般项目），空地具身机器人协同的高铁站房三维重建及动态更新方法研究，主持</li>
+                    <li>国家自然科学基金（面上基金），多模态特征增强的室内点云三维场景图智能构建方法, 主持</li>
+                    <li>深圳市科技计划-科技重大专项，城市数字孪生三维场景建模关键技术研究及应用示范-课题, 共同主持</li>
+                    <li>广东省自然科学基金青年提升(优秀青年项目)，空地跨视角协同感知的移动车载平台精准定位与位姿优化方法, 主持</li>
+                    <li>亚热带建筑与城市科学全国重点实验室自主研究课题, 城市卫星拒止环境车载系统高精度定位与三维测图研究, 主持</li>
+                    <li>国家重点研发计划项目子课题, 超大城市绿色低碳发展监测与诊断优化应用示范, 主持</li>
+                    <li>广东省面上基金, 联合视觉SLAM与深度神经网络的室内场景语义分类与自动化建模技术, 主持</li>
+                    <li>深圳市基础研究面上项目, 面向机器人自主导航的类脑视觉场景理解与实时位置计算方法, 主持</li>
+                    <li>佛山市促进高校科技成果服务产业发展扶持项目, 室内全空间三维测图于标准化建模技术研究, 主持</li>
+                    <li>国家自然科学基金（青年基金）, 多RGB-D传感器联合的在线室内高精度三维测图方法, 主持</li>
+                    <li>中国博士后科学基金, 多元特征混合优化的RGB-D室内高精度三维测图方法, 主持</li>
+                    <li>深圳市科创委自由探索项目, 基于便携式深度传感器的城市封闭/半封闭空间快速三维测图技术研究, 主持</li>
+                    <li>城市自然资源监测与仿真重点实验室开放基金, 基于室内高精度三维测图的BIM关键部件自动化重建方法, 主持</li>
+                    <li>武汉大学测绘遥感信息工程国家重点实验室开放基金, 集成视觉与几何特征的RGB-D SLAM方法, 主持</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="mb-24 text-center">
+            <h2 class="section-heading">团队成员</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-6">博士研究生与研究助理</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2">
+                        <img src="data/史博航.png" alt="史博航" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200">
+                        <h4 class="font-bold text-lg">史博航 (2025级)</h4>
+                        <p class="text-gray-500 text-sm">三维场景图生成与交互</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2">
+                        <img src="data/蔡本合.png" alt="蔡本合" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200">
+                        <h4 class="font-bold text-lg">蔡本合 (2022级)</h4>
+                        <p class="text-gray-500 text-sm">点云室内语义理解与重建</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2">
+                        <img src="data/陈宇杰.png" alt="陈宇杰" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200">
+                        <h4 class="font-bold text-lg">陈宇杰 (科研助理，2025年-至今)</h4>
+                        <p class="text-gray-500 text-sm">自主导航系统设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-6">硕士研究生</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- 2026 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><div class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200 bg-blue-50 flex items-center justify-center text-blue-700 font-bold">李易霖</div><h4 class="font-bold text-lg">李易霖 (2026级)</h4><p class="text-gray-500 text-sm">人工智能城市交叉专业</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><div class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200 bg-blue-50 flex items-center justify-center text-blue-700 font-bold">李承茂</div><h4 class="font-bold text-lg">李承茂 (2026级)</h4><p class="text-gray-500 text-sm">测绘工程专业</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><div class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200 bg-blue-50 flex items-center justify-center text-blue-700 font-bold">罗言</div><h4 class="font-bold text-lg">罗言 (2026级)</h4><p class="text-gray-500 text-sm">测绘工程专业</p></div>
+
+                     <!-- 2025 -->
+                      <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/卢嘉涛.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="卢嘉涛"><h4 class="font-bold text-lg">卢嘉涛 (2025级)</h4><p class="text-gray-500 text-sm">场景图生成</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/罗婷丹.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="罗婷丹"><h4 class="font-bold text-lg">罗婷丹 (2025级)</h4><p class="text-gray-500 text-sm">三维树木重建</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/陈蔚聪.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="陈蔚聪"><h4 class="font-bold text-lg">陈蔚聪 (2025级)</h4><p class="text-gray-500 text-sm">空间智能体</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/王楠.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="王楠"><h4 class="font-bold text-lg">王楠 (2025级)</h4><p class="text-gray-500 text-sm">三维场景理解</p></div>
+                   
+                    <!-- 2024 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/张文鹏.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="张文鹏"><h4 class="font-bold text-lg">张文鹏 (2024级)</h4><p class="text-gray-500 text-sm">BIM场景图生成</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/刘令翔.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="刘令翔"><h4 class="font-bold text-lg">刘令翔 (2024级)</h4><p class="text-gray-500 text-sm">多模态室内场景图</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg text-center transition-transform transform hover:-translate-y-2"><img src="data/李寒雨.png" class="w-24 h-24 mx-auto rounded-full mb-3 border-4 border-blue-200" alt="李寒雨"><h4 class="font-bold text-lg">李寒雨 (2024级)</h4><p class="text-gray-500 text-sm">3DGS建筑重建</p></div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-6">已毕业学生</h3>
+                <div class="max-w-4xl mx-auto text-left space-y-2">
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>黎施彬 (2022级硕士)</strong> - 深圳大学牟林老师团队攻读博士</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>吴雨萱 (2023级硕士)</strong> - 深圳库犸科技有限公司</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>谢希平 (2023级硕士)</strong> - 希迪智驾科技股份有限公司（希迪智驾）</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>冼敬光 (2023级硕士)</strong> - 知有无界（深圳）智能科技有限公司</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>罗建军 (2023级硕士，江西师大访问)</strong> - 北京谦合益邦云信息技术有限公司（杭州）</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>陈宇杰 (2022级硕士)</strong> - 深圳大学</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>李曜宇 (2022级硕士)</strong> - 华东师范大学读博</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>敖卓瑜 (2022级硕士)</strong> - 公务员</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>杜涵 (2022级硕士)</strong> - 比亚迪</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>黄鸿盛 (2021级硕士)</strong> - 香港理工大学读博</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>杜思齐 (2021级硕士)</strong> - 中国科学院空天信息创新研究院攻读博士（2026年入学）</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>冯宇祺 (2021级硕士)</strong> - 腾讯</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>李雨松 (2021级硕士)</strong> - 万科集团</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>范宇航 (2020级硕士)</strong> - 比亚迪</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>姚萌萌 (2019级硕士)</strong> - 光明实验室</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>邓媛媛 (2018级硕士)</strong> - 51 World</p>
+                    <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>王敬淳 (2019级硕士)</strong> - 高校教师</p>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-6">合作指导及本科生</h3>
+                <div class="max-w-4xl mx-auto text-left space-y-2">
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>姜嘉鑫 (2022级硕士)</strong> - 点云实例化分割</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>宋锦阳 (2018级硕士)</strong> - 几何约束的室内点云平面要素提取与重建方法</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>万嘉威 (2020级本科)</strong> - 香港理工大学深造</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>廖凌枫 (2018级本科)</strong> - 东京大学读博</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>黄鸿盛 (2017级本科)</strong> - 香港理工大学深读博</p>
+                     <p class="text-gray-600 bg-white p-3 rounded-md shadow-sm"><strong>叶致煌 (2017级本科)</strong> - 深圳迈嘉城科信息科技有限公司</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="mb-24 text-center">
+            <h2 class="section-heading">教学课程</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800">C++程序设计</h3>
+                    <p class="text-blue-600 font-semibold mb-2">本科生课程</p>
+                    <p class="text-gray-600">本课程旨在教授C++编程语言的基础与高级特性，培养学生利用C++解决复杂工程问题的能力，为后续专业课程打下坚实的编程基础。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800">GIS原理与应用</h3>
+                    <p class="text-blue-600 font-semibold mb-2">本科生课程</p>
+                    <p class="text-gray-600">本课程旨在教授地理信息系统基本原理、方法及应用相关内容，培养学生利用GIS解决复杂空间分析问题的能力。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800">LiDAR原理与应用</h3>
+                    <p class="text-blue-600 font-semibold mb-2">研究生课程</p>
+                    <p class="text-gray-600">深入探讨激光雷达原理、方法与应用技术。课程讲解与学生讲述结合，培养学生应用激光雷达进行数据处理与分析计算的综合能力。</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800">智能化测绘前沿</h3>
+                    <p class="text-blue-600 font-semibold mb-2">研究生课程</p>
+                    <p class="text-gray-600">深入智能化测绘技术原理与方法，及其在各个领域的智能化应用。课程讲解与学生讲述结合，让学生系统了解智能化测绘领域前沿领域的研究现状。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service and Honors Section -->
+        <section id="service-and-honors" class="mb-24 text-center">
+            <h2 class="section-heading">学术服务与荣誉</h2>
+
+            <!-- Sub-section for Academic Service -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8">学术服务 (Academic Service)</h3>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">学术兼职</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Photogrametry Engineering and Remote Sensing(PE&RS)期刊, 副主编</li>
+                        <li>IEEE GRSS Shenzhen Chapter, 副主席</li>
+                        <li>The Photogrammetry Record, 青年编委</li>
+                        <li>Remote Sensing, 客座编辑</li>
+                        <li>IEEE JSTARS, 客座编辑</li>
+                        <li>激光雷达专业委员会实景三维工作组, 副组长</li>
+                        <li>中国虚拟地理环境委员会, 委员</li>
+                        <li>中国图学学会BIM专委会, 委员</li>
+                        <li>中国测绘学会位置服务工委会, 委员</li>
+                        <li>国际数字地球学会中国国家委员会激光雷达专业委员会, 委员</li>
+                        <li>Expert of ISO Technical Committee 59</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">期刊审稿人</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>ISPRS Journal of Photogrammetry and Remote Sensing</li>
+                        <li>IEEE Transactions on Industrial Informatics</li>
+                        <li>Automation In Construction</li>
+                        <li>International Journal of Applied Earth Observation and Geoinformation</li>
+                        <li>The Photogrammetry Record</li>
+                        <li>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</li>
+                        <li>IROS 2023</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sub-section for Intellectual Property -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8 mt-16">知识产权 (Intellectual Property)</h3>
+            <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md text-left">
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>中国发明专利，一种矢量线引导的三维高斯空地跨视角车辆定位方法及系统，<strong>汤圣君</strong>; 谢希平; 陈蔚聪; 李寒雨; 蔡树彬; 王伟玺; 李晓明; 谢林甫; 郭仁忠，ZL202610353146.7，申请日：2026年03月23日，授权日：2026年06月26日。<a href="data/patent_ZL202610353146.7.pdf" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，三维网格模型质量评估方法，<strong>汤圣君</strong>; 李寒雨; 王楠; 王伟玺; 廖江海; 李晓明; 谢林甫; 郭仁忠，ZL202610052177.9，申请日：2026年01月15日，授权日：2026年06月26日。<a href="data/patent_ZL202610052177.9.pdf" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，基于空中点云先验引导的场景补全方法及系统，<strong>汤圣君</strong>; 王伟玺; 陈宇杰; 李晓明; 谢林甫; 郭仁忠，ZL202411488648.8，申请日：2024年10月24日，授权日：2025年01月03日。<a href="https://kdocs.cn/l/clRa5IVxr2JS" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，多模态特征嵌入的室内三维场景理解方法及终端，<strong>汤圣君</strong>; 王伟玺; 蔡本合; 李晓明; 谢林甫; 郭仁忠，ZL202411436931.6，申请日：2024年10月15日，授权日：2025年04月04日。<a href="https://kdocs.cn/l/cj9rWuXm4HAK" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，结构与参数引导的室内要素规则化与关系推理方法及终端，<strong>汤圣君</strong>; 王伟玺; 蔡本合; 杜涵; 谢林甫; 李晓明; 赵志刚; 郭仁忠，ZL202311746821.5，申请日：2023年12月19日，授权日：2024年05月17日。<a href="https://kdocs.cn/l/cdWEGS8ZF5j8" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种多任务感知的三维场景图要素分割与关系推理方法，<strong>汤圣君</strong>; 王伟玺; 蔡本合; 杜涵; 杜思齐; 谢林甫; 李晓明; 郭仁忠，ZL202311727058.1，申请日：2023年12月15日，授权日：2024年04月16日。<a href="https://kdocs.cn/l/culpGySuu9z0" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种移动视频与地理场景的融合方法、系统及电子设备，<strong>汤圣君</strong>; 赵维淞; 王伟玺; 李晓明; 郭仁忠，ZL202010224118.8，申请日：2020年03月26日，授权日：2023年08月29日。<a href="https://kdocs.cn/l/clbbVOgIKrW3" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种视觉与激光传感器外参校正方法及相关设备，<strong>汤圣君</strong>; 冯宇祺; 冯禹洪; 王伟玺; 黄俊杰; 杜思齐; 范宇航，ZL202310395666.0，申请日：2023年04月14日，授权日：2024年09月12日。<a href="https://kdocs.cn/l/cuJWpA3JDOev" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种具有结构语义的室内三维模型自动重构方法及系统，<strong>汤圣君</strong>; 文奴; 王伟玺，ZL201910177032.1，申请日：2019年03月28日，授权日：2023年04月18日。<a href="https://kdocs.cn/l/cgGtHPLSK2Vt" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，空地视角图像协同的车载系统定位方法、终端及存储介质，<strong>汤圣君</strong>; 李雨松; 王伟玺; 冯宇祺; 李晓明; 谢林甫; 周宝定; 郭仁忠，ZL202311746880.2，申请日：2023年12月19日，授权日：2024年04月16日。<a href="https://kdocs.cn/l/ctDdCIOBIffk" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种室内三维点云语义分类方法、装置、介质及终端，<strong>汤圣君</strong>; 李晓明; 王伟玺; 姚萌萌; 谢林甫; 黄正东; 郭仁忠，ZL202210850940.4，申请日：2022年07月20日，授权日：2022年12月06日。<a href="https://kdocs.cn/l/cf8A0nVphBa8" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，室内空间高精度视觉位置定位方法、终端及存储介质，<strong>汤圣君</strong>; 王伟玺; 李雨松; 万嘉威; 冯禹洪; 李晓明; 谢林甫，ZL202211564628.5，申请日：2022年12月07日，授权日：2023年09月19日。<a href="https://kdocs.cn/l/clT318y8Zfqb" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种基于室内三维点云空间自动剖分方法，<strong>汤圣君</strong>; 李晓明; 王伟玺; 王敬淳; 朱家松; 郭仁忠; 李游; 谢林甫，ZL202110376812.6，申请日：2021年04月08日，授权日：2021年07月13日。<a href="https://kdocs.cn/l/ct9LPfw2xl2C" class="text-blue-600 hover:underline">⏬</a></li>
+                    <li>中国发明专利，一种多RGB-D传感器的空间三维扫描方法及装置，<strong>汤圣君</strong>; 李游; 李晓明; 黄正东; 王伟玺; 贺彪; 赵志刚; 郭仁忠，ZL201910281532.X，申请日：2019年04月09日，授权日：2021年03月13日。<a href="https://kdocs.cn/l/cq9AqJiD9eis" class="text-blue-600 hover:underline">⏬</a></li>
+                </ul>
+            </div>
+
+            <!-- Sub-section for Awards -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8 mt-16">荣誉奖项 (Awards & Honors)</h3>
+            <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md text-left">
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>PE&RS主编精选论文，(1/7)，2026</li>
+                    <li>2025中国地理信息科技进步一等奖，(1/20)，2025</li>
+                    <li>第三届中国激光雷达青年科学家奖，(1/1)，2025</li>
+                    <li>2024年度深圳大学十大科技进展，(2/10)，2025</li>
+                    <li>2023年度自然资源科学技术奖, 实景三维城市环境智能构建关键技术及应用, 一等奖 (2/15)</li>
+                    <li>ISPRS TC1 Symposium 国际会议最佳论文奖, 2024</li>
+                    <li>《武汉大学学报(信息科学版)》2023年度优秀论文</li>
+                    <li>2023非暴露空间国际学术论坛最佳论文奖</li>
+                    <li>深圳市第三届优秀科技学术论文成果奖, 2023</li>
+                    <li>ISPRS Geospatial Week 2023 国际会议最佳工作坊报告奖</li>
+                    <li>IPIN 2022 Competition ONLINE Track 2 -Camera, 第二名</li>
+                    <li>深圳市高层次人才C类, 2019</li>
+                    <li>广东省高校科技成果转化大赛电子信息组二等奖 (2/5), 2020</li>
+                    <li>深圳市南山区"2020创业之星大赛"互联网与移动互联网初创组一等奖 (1/3)</li>
+                    <li>全国优秀测绘工程奖铜奖 (9/16), 2022</li>
+                    <li>深圳大学教学成果奖一等奖 (11/12), 2022</li>
+                </ul>
+            </div>
+
+            <!-- Sub-section for Academic Activities -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-8 mt-16">学术活动 (Academic Activities)</h3>
+            <div class="space-y-12 max-w-5xl mx-auto text-left">
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2026-lingnan-university-academic-visit.jpg" alt="香港岭南大学学术交流" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">香港岭南大学学术交流</p><p class="text-sm text-gray-600">香港, 2026年11月2日11:00. 应香港岭南大学数据科学学院邀请，汤圣君作“复杂三维空间协同感知与高效重建”学术报告；罗言、史博航参加交流。两校团队围绕“开发个人化室内模拟平台用于机器人互动策略微调与部署”联合项目交流研究进展。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2026-lidar10-conference-group-photo.jpg" alt="第十届全国激光雷达大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第十届全国激光雷达大会</p><p class="text-sm text-gray-600">深圳, 2026年10月30日-11月1日. 汤圣君担任大会组织委员会主任，团队参与大会组织并参会。汤圣君作“人类标记引导的三维Mesh模型质量评估方法”报告，团队学生围绕四篇获奖论文作相应报告；四篇论文获评青年优秀论文，汤圣君获评优秀指导教师。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2026-lingnan-hou-lecture.png" alt="物理交互控制中的任务级泛化探索学术讲座" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">深圳大学建筑与城市规划学院学术讲座</p><p class="text-sm text-gray-600">深圳, 2026年9月3日. 邀请香港岭南大学侯志民博士作“物理交互控制中的任务级泛化探索”报告，汤圣君主持。地点：深圳大学粤海校区校友广场303会议室。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2026siben-forum.jpg?v=2" alt="思本论坛" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">思本论坛</p><p class="text-sm text-gray-600">2026年6月12-13日. 参加由江西理工大学主办的思本论坛，并作“人类标注过程引导的三角网格模型质量检测”报告；团队张文鹏同学参会并作“面向BIM智能分析的建筑层次化场景图模型自动生成方法”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2026digitalearth.jpg" alt="第四届中国数字地球大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第四届中国数字地球大会</p><p class="text-sm text-gray-600">青岛, 2026年6月5-7日. 汤圣君作“城市级认知场景图构建及其大模型认知增强方法”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/AIRS2026_Changsha.jpg" alt="AIRS2026人工智能与遥感科学交叉论坛" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第三届人工智能与遥感科学交叉论坛 (AIRS2026)</p><p class="text-sm text-gray-600">长沙, 2026年5月15-17日. 组织“实景三维与数字孪生”专题，并作“面向弱观测建筑区域的质量感知生成式三维模型优化与补全”学术报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2025lidar.jpg" alt="第九届中国激光雷达大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第九届中国激光雷达大会</p><p class="text-sm text-gray-600">武汉, 2025年9月26-28日. 汤圣君获得第三届激光雷达青年科学家奖并作“空地跨视角协同定位与优化测图研究”特邀报告，李寒雨作“生成式视角增强与深度补偿的倾斜模型精细重建”报告，史博航博士参会。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2025dt.png" alt="数字孪生会议" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第九届数字孪生与智能制造服务学术会议</p><p class="text-sm text-gray-600">成都, 2025年6月. 作“城市空间认知场景图智能构建研究”专题报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2025VGE.png" alt="虚拟地理环境会议" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第十届全国虚拟地理环境学术会议 (CVGE2025)</p><p class="text-sm text-gray-600">南京, 2025年5月. 作“空地跨视角协同定位与优化测图研究”专题报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2024zhuhai.png" alt="青年学者论坛" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">粤港澳高校联盟2024年青年学者论坛</p><p class="text-sm text-gray-600">珠海, 2024年11月. 受邀作“空地跨视角协同定位与优化测图研究”专题报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2024Lidarweiyuan.jpg" alt="激光雷达大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第八届全国激光雷达大会</p><p class="text-sm text-gray-600">桂林, 2024年11月. 担任专题召集人, 并作“室内点云三维场景图智能构建”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/GISConf2024.png" alt="GIS理论与方法年会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第十九届GIS理论与方法年会</p><p class="text-sm text-gray-600">西安, 2024年10月. 担任专题召集人, 并作“场景图和多LLM Agent协同的机器智能交互方法”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/CERT_LSD_HKreport.png" alt="香港测量师学会报告" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">香港测量师学会持续专业发展(CPD)报告</p><p class="text-sm text-gray-600">香港, 2024年7月. 受邀作“城市植被数字孪生场景智能构建探索”学术报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/FSDTHK.jpg" alt="香港地政总署研讨会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">香港地政总署 "CSDI发展空间数据标准框架" 项目汇报研讨会</p><p class="text-sm text-gray-600">香港, 2024年6月. 作为内地专家就“内地SDI发展及潜在数据应用”发表演讲。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/bestpaperisprs.png" alt="ISPRS会议" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">ISPRS国际摄影测量与遥感学会会议</p><p class="text-sm text-gray-600">长沙, 2024年5月. 团队论文荣获最佳论文奖。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/2023nonex.png" alt="非暴露空间国际学术论坛" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">2023非暴露空间国际学术论坛</p><p class="text-sm text-gray-600">香港, 2023年12月. 团队论文荣获最佳论文奖。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/beijingkongtian.png" alt="中科院空天院报告" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">中国科学院空天技术研究院</p><p class="text-sm text-gray-600">北京, 2023年12月. 作“面向数字孪生的城市场景感知与建模关键技术研究”专题学术报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/shanghaicof.png" alt="摄影测量与遥感2023学术年会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">摄影测量与遥感2023学术年会</p><p class="text-sm text-gray-600">上海, 2023年10月. 作“面向植被要素实景建模的大规模三维仿真树木数据集及应用”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/lidarcof.png" alt="第七届全国激光雷达大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第七届全国激光雷达大会</p><p class="text-sm text-gray-600">2023年10月. 作为专题主席并作“室内高精度视觉位姿估计与AR导航”报告。</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/GSW2023.png" alt="ISPRS Geospatial Week 2023" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">ISPRS Geospatial Week 2023</p><p class="text-sm text-gray-600">开罗, 埃及, 2023年9月.</p></div></article>
+                <article class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md"><img src="data/yanjicof.png" alt="第九届全国虚拟地理环境大会" class="w-full md:w-48 h-auto object-cover rounded-md flex-shrink-0"><div><p class="font-semibold text-gray-800">第九届全国虚拟地理环境大会</p><p class="text-sm text-gray-600">延吉, 2023年8月. 作为专题召集人并作报告，指导研究生获创新大赛特等奖。</p></div></article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <div class="container mx-auto">
+            <p>&copy; 2025 复杂空间三维感知与智能交互小组. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
